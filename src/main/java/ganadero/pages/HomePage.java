@@ -6,7 +6,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import javax.xml.xpath.XPath;
 
 public class HomePage {
     WebDriver driver;
@@ -41,7 +40,8 @@ public class HomePage {
     }
     @FindBy(css = "a[href='/canales-digitales/ganamovil-empresas/']")
     WebElement ganaMovilEmpresasOption;
-    public void selectGanaMovilEmpresas(){
+    public GanaMovilEmpresas selectGanaMovilEmpresas(){
         ganaMovilEmpresasOption.click();
+        return new GanaMovilEmpresas(driver);
     }
 }

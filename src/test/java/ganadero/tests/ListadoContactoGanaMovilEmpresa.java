@@ -1,12 +1,13 @@
 package ganadero.tests;
 
 import ganadero.basetest.BaseTest;
+import ganadero.pages.GanaMovilEmpresas;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-import java.io.IOException;
+import java.util.List;
 
-public class HomePage extends BaseTest {
+public class ListadoContactoGanaMovilEmpresa extends BaseTest {
 
     @Test()
     public void openHomePage() {
@@ -16,7 +17,9 @@ public class HomePage extends BaseTest {
         homePage.closeComunicado();
         homePage.selectNegocios();
         homePage.showOptions();
-        homePage.selectGanaMovilEmpresas();
+        GanaMovilEmpresas empresas = homePage.selectGanaMovilEmpresas();
+        List<String> contactos = empresas.getTextOfContactos();
+        System.out.println(contactos);
     }
 
 }
