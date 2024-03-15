@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Ganadero" options="--add-exports java.base/jdk.internal.icu.text=ALL-UNNAMED,ALL-UNNAMED" />
+      <module name="Ganadero" options="" />
     </option>
   </component>
 </project>
